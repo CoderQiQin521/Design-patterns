@@ -1,0 +1,26 @@
+{
+    "name": "Design-patterns",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack --config webpack.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CoderQiQin521/Design-patterns.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/CoderQiQin521/Design-patterns/issues"
+    },
+    "homepage": "https://github.com/CoderQiQin521/Design-patterns#readme",
+    "dependencies": {
+        "jquery": "^3.5.1"
+    },
+    "devDependencies": {
+        "webpack": "^4.44.1"
+    }
+}

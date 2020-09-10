@@ -6,3 +6,7 @@ fetch('/api/list.json')
     .then((res) => {
         console.log(res);
     });
+
+import App from './App';
+const app = new App('#app');
+app.init();

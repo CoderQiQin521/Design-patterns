@@ -1,15 +1,24 @@
 import $ from 'jquery';
+import List from './List/List';
+import ShoppingCart from './Shoppingcart/ShoppingCart';
+import { getCart } from './Shoppingcart/getCart';
 
 export default class App {
     constructor(el) {
         this.el = $(el);
     }
     init() {
-        console.log(this.el.width());
-        this.initList();
+        this._initShoppingCart();
+        this._initList();
     }
 
-    initList() {
-        console.log('list');
+    _initList() {
+        const list = new List(this);
+        list.init();
+    }
+    _initShoppingCart() {
+        const cart = getCart();
+        const shoppingCart = new ShoppingCart(this, cart);
+        shoppingCart.init();
     }
 }

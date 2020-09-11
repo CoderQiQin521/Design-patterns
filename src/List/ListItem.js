@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import { getCart } from '../Shoppingcart/getCart';
 import StateMachine from 'javascript-state-machine';
-// import { log } from '../utils/log';
+import { log } from '../utils/log';
 
 export default class ListItem {
     constructor(list, data) {
@@ -24,7 +24,6 @@ export default class ListItem {
         el.append(`<p>价格: ${data.price}</p>`);
     }
 
-    // @log('add')
     _initBtn() {
         const $btn = $('<button>');
         let that = this;
@@ -68,9 +67,13 @@ export default class ListItem {
         updateText();
         this.el.append($btn);
     }
+
+    @log('add')
     _addToCartHandle() {
         this.cart.add(this.data);
     }
+
+    @log('del')
     _deleteFromCartHandle() {
         this.cart.del(this.data.id);
     }

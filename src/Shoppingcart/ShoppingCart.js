@@ -1,9 +1,10 @@
 import $ from 'jquery';
+import { getCart } from '../Shoppingcart/getCart';
 
 export default class ShoppingCart {
-    constructor(app, cart) {
+    constructor(app) {
         this.app = app;
-        this.cart = cart;
+        this.cart = getCart();
         this.el = $('<div>').css({
             paddingBottom: '10px',
             borderBottom: '1px solid #ddd',
@@ -14,9 +15,13 @@ export default class ShoppingCart {
         let that = this;
         let btn = $('<button>购物车</button>');
         btn.click(function () {
-            alert(that.cart.showList());
+            that.showCart();
         });
         this.el.append(btn);
+    }
+
+    showCart() {
+        alert(this.cart.showList());
     }
 
     init() {

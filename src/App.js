@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import List from './List/List';
 import ShoppingCart from './Shoppingcart/ShoppingCart';
-import { getCart } from './Shoppingcart/getCart';
 
 export default class App {
     constructor(el) {
@@ -17,8 +16,7 @@ export default class App {
         list.init();
     }
     _initShoppingCart() {
-        const cart = getCart();
-        const shoppingCart = new ShoppingCart(this, cart);
+        const shoppingCart = new ShoppingCart(this);
         shoppingCart.init();
     }
 }

@@ -68,6 +68,7 @@ export default class ListItem {
         this.el.append($btn);
     }
 
+    // 装饰者模式
     @log('add')
     _addToCartHandle() {
         this.cart.add(this.data);

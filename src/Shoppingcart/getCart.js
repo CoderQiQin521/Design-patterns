@@ -1,4 +1,4 @@
-// 没有对外暴露
+// 没有对外暴露,保证只有一个cart
 class Cart {
     constructor() {
         this.list = [];
@@ -17,7 +17,7 @@ class Cart {
     }
 }
 
-// 单例模式返回,保证只有一个cart
+// 单例模式
 export const getCart = (() => {
     let cart;
 

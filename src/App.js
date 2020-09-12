@@ -2,6 +2,7 @@ import $ from 'jquery';
 import List from './List/List';
 import ShoppingCart from './Shoppingcart/ShoppingCart';
 
+// 构造函数模式
 export default class App {
     constructor(el) {
         this.el = $(el);

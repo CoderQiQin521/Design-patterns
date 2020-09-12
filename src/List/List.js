@@ -7,7 +7,7 @@ export default class List {
         this.el = $('<div></div>');
         this.app = app;
     }
-
+    // 模版方法模式
     init() {
         this._loadData()
             .then((data) => {
@@ -19,6 +19,7 @@ export default class List {
     }
 
     _loadData() {
+        // 观察者模式
         return fetch(GET_LIST).then((res) => res.json());
     }
 
